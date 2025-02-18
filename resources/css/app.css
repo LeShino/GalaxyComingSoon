@@ -1,0 +1,45 @@
+/** {*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*}*/
+
+/*html,*/
+/*body {*/
+/*  height: 100%;*/
+/*  width: 100%;*/
+/*}*/
+@import "tailwindcss";
+@source "../views";
+
+body {
+    background: linear-gradient(135deg, #0B1026 0%, #1E0B26 100%);
+}
+
+/* Add stars animation */
+.bg-space-gradient::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #ffffff, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: stars 4s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes stars {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-200px);
+    }
+}

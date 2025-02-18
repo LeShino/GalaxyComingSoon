@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <meta name="description" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <link rel="canonical" href="">
+
+    <title>Galaxy - Coming Soon</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-space-gradient min-h-screen text-white font-space overflow-hidden relative">
+    <!-- Logo -->
+    <div class="absolute top-8 left-8">
+        <div class="flex items-center gap-2">
+            <span class="text-2xl font-bold">Galaxy</span>
+            <span class="bg-purple-900/50 text-xs px-2 py-1 rounded-full">Beta</span>
+        </div>
+    </div>
+
+    <!-- Planets -->
+    <div class="absolute left-0 bottom-0 w-64 h-64">
+        <img src="{{ asset('resources/images/BluePlanet.png') }}" alt="Blue Planet" class="w-full h-full object-cover opacity-80">
+    </div>
+    <div class="absolute right-0 top-0 w-48 h-48">
+        <img src="{{ asset('resources/images/RedPlanet.png') }}" alt="Red Planet" class="w-full h-full object-cover opacity-80">
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex flex-col items-center justify-center min-h-screen px-4 relative z-10">
+        <h1 class="text-7xl font-bold mb-16 tracking-wider">Coming Soon</h1>
+
+        <!-- Timer -->
+        <div class="flex gap-4 mb-16">
+            <div class="bg-purple-900/30 px-8 py-4 rounded-lg backdrop-blur-sm">
+                <div class="text-4xl font-bold">23</div>
+                <div class="text-sm text-gray-400">DAYS</div>
+            </div>
+            <div class="text-4xl font-bold flex items-center">:</div>
+            <div class="bg-purple-900/30 px-8 py-4 rounded-lg backdrop-blur-sm">
+                <div class="text-4xl font-bold">02</div>
+                <div class="text-sm text-gray-400">HOURS</div>
+            </div>
+            <div class="text-4xl font-bold flex items-center">:</div>
+            <div class="bg-purple-900/30 px-8 py-4 rounded-lg backdrop-blur-sm">
+                <div class="text-4xl font-bold">33</div>
+                <div class="text-sm text-gray-400">MINUTES</div>
+            </div>
+        </div>
+
+        <!-- Notification Form -->
+        <div class="text-center mb-8">
+            <p class="text-lg mb-4">Get notified when site goes live:</p>
+            <div class="flex gap-2 justify-center">
+                <input
+                    type="email"
+                    placeholder="Info@aceagency.design"
+                    class="bg-purple-900/30 px-6 py-3 rounded-lg backdrop-blur-sm w-80 focus:outline-none focus:ring-2 focus:ring-accent-blue"
+                >
+                <button class="bg-accent-blue px-6 py-3 rounded-lg text-white font-semibold bg-blue-500 transition-colors">
+                    Subscribed ✓
+                </button>
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="text-center mb-12">
+            <p class="text-gray-400 mb-2">If you have any qustions, please contact us at:</p>
+            <a href="mailto:contact@galaxy.com" class="text-accent-blue hover:underline">contact@galaxy.com</a>
+        </div>
+
+        <!-- Social Links -->
+        <div class="flex gap-6 mb-8">
+            <a href="#" class="text-gray-400 hover:text-accent-blue transition-colors">
+                <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-accent-blue transition-colors">
+                <i class="fab fa-telegram-plane text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-accent-blue transition-colors">
+                <i class="fab fa-instagram text-xl"></i>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-gray-400 text-sm">
+            © 2022 Galaxy, All rights reserved.
+        </footer>
+    </main>
+</body>
+</html>
