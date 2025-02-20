@@ -8,7 +8,7 @@ import type { Authenticators } from '@adonisjs/auth/types'
  */
 export default class AuthMiddleware {
   /**
-   * The URL to redirect to, when authentication fails
+   * The URL to redirect to, when auth fails
    */
   redirectTo = '/login'
 

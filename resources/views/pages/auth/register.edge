@@ -1,11 +1,13 @@
-@layout({ title: 'Register' })
+{{-- @layout({ title: 'Register' }) --}}
 <h1> Register </h1>
 
-<form>
+<form method="POST" action="{{ route('auth.register.store') }}" >
+
+    {{ csrfField() }}
     <label>
         <span> Full Name </span>
-        <input type="text" name="fullname" value="{{ old('fullname') || '' }}" />
-        @inputError('fullname')
+        <input type="text" name="fullName" value="{{ old('fullName') || '' }}" />
+        @inputError('fullName')
         {{ $message.join(', ') }}
         @end
     </label>
@@ -32,4 +34,4 @@
 
 </form>
 
-@end
+{{-- @end --}}
