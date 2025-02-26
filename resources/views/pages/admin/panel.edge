@@ -1,6 +1,7 @@
 @if( auth.user)
 
     Logged in as {{ auth.user.fullName }}
+    
     <form>
         {{ csrfField() }}
         <button type="submit">Logout</button>

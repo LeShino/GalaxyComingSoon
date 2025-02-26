@@ -8,7 +8,7 @@
         <span> Full Name </span>
         <input type="text" name="fullName" value="{{ old('fullName') || '' }}" />
         @inputError('fullName')
-        {{ $message.join(', ') }}
+        {{ $messages.join(', ') }}
         @end
     </label>
 
@@ -16,7 +16,7 @@
         <span> Email </span>
         <input type="email" name="email" value="{{ old('email') || '' }}" />
         @inputError('email')
-        {{ $message.join(', ') }}
+        {{ $messages.join(', ') }}
         @end
     </label>
 
@@ -24,11 +24,9 @@
         <span> Password </span>
         <input type="password" name="password" value="{{ old('password') || '' }}" />
         @inputError('password')
-        {{ $message.join(', ') }}
+        {{ $messages.join(', ') }}
         @end
     </label>
-
-    {{-- <input type="hidden" name="_csrf" value="{{ csrfToken() }}"> --}}
 
     <button type="submit">Register</button>
 
