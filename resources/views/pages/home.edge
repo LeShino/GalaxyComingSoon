@@ -24,9 +24,15 @@
     <link rel="canonical" href="">
 
     <title>Galaxy - Coming Soon</title>
-    <link rel="stylesheet" href="./src/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+    <link href="{{ asset('resources/fonts/fontawesome/all.css') }}" rel="stylesheet" />
+    <link href="{{ asset('resources/fonts/fontawesome/brands.css') }}" rel="stylesheet" />
+    <link href="{{ asset('resources/fonts/fontawesome/fontawesome.css') }}" rel="stylesheet" />
+    <link href="{{ asset('resources/fonts/fontawesome/regular.css') }}" rel="stylesheet" />
+    <link href="{{ asset('resources/fonts/fontawesome/solid.css') }}" rel="stylesheet" />
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+
 </head>
 <body class="bg-space-gradient min-h-screen text-white font-space overflow-hidden relative">
     <!-- Logo -->
@@ -71,16 +77,19 @@
         <div class="text-center mb-8">
             <p class="text-lg mb-4">Get notified when site goes live:</p>
             <div class="flex gap-2 justify-center">
-                <input
-                    type="email"
-                    placeholder="Info@aceagency.design"
-                    class="bg-purple-900/30 px-6 py-3 rounded-lg backdrop-blur-sm w-80 focus:outline-none focus:ring-2 focus:ring-accent-blue"
-                >
-                <button class="bg-accent-blue px-6 py-3 rounded-lg text-white font-semibold bg-blue-500 transition-colors">
-                    Subscribed ✓
-                </button>
+                <form id="subscribeForm" action="{{ route('subscribe.store') }}" method="POST" class="flex gap-2 justify-center">
+                    {{ csrfField() }}
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Info@aceagency.design"
+                        class="bg-purple-900/30 px-6 py-3 rounded-lg backdrop-blur-sm w-80 focus:outline-none focus:ring-2 focus:ring-accent-blue"
+                    >
+                    <button type="submit" id="subscribeButton" class="bg-accent-blue px-6 py-3 rounded-lg text-white font-semibold bg-blue-500 transition-colors">
+                        Subscribe
+                    </button>
+                </form>
             </div>
-        </div>
 
         <!-- Contact Info -->
         <div class="text-center mb-12">
@@ -91,13 +100,13 @@
         <!-- Social Links -->
         <div class="flex gap-6 mb-8">
             <a href="#" class="text-gray-400 hover:text-accent-blue transition-colors">
-                <i class="fab fa-twitter text-xl"></i>
+                <i class="fa-brands fa-twitter text-xl"></i>
             </a>
             <a href="#" class="text-gray-400 hover:text-accent-blue transition-colors">
-                <i class="fab fa-telegram-plane text-xl"></i>
+                <i class="fa-brands fa-telegram text-xl "></i>
             </a>
             <a href="#" class="text-gray-400 hover:text-accent-blue transition-colors">
-                <i class="fab fa-instagram text-xl"></i>
+                <i class="fa-brands fa-instagram text-xl"></i>
             </a>
         </div>
 
