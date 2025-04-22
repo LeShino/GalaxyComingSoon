@@ -4,7 +4,7 @@
   import { BaseModel, column } from '@adonisjs/lucid/orm'
   import { withAuthFinder } from '@adonisjs/auth/mixins/lucid'
 
-  const AuthFinder = withAuthFinder(() => hash.use('bcrypt'), {
+  const AuthFinder = withAuthFinder(() => hash.use('scrypt'), {
     uids: ['email'],
     passwordColumnName: 'password',
   })

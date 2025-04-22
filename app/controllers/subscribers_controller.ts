@@ -1,5 +1,5 @@
 import type { HttpContext } from '@adonisjs/core/http'
-import vine from '@vinejs/vine'
+// import vine from '@vinejs/vine'
 import Subscriber from '#models/subscriber'
 
 
