@@ -12,11 +12,16 @@
 import router from '@adonisjs/core/services/router'
 import SubscribersController from '#controllers/subscribers_controller'
 
-router.on('/').render('pages/home')
+//Front Office
+router.on('/').render('pages/frontoffice/home')
 router.post('/subscribe', [SubscribersController, 'store']).as('subscribe.store')
-router.get('/admin/subscribers', [SubscribersController, 'index'])
 
+//Authentification
+router.get('/login', async (ctx) => {
+    return ctx.view.render('pages/backoffice/login')
+})
+// router.on('/login').render('pages/backoffice/login')
 
-router.get('/admin/login', 'AdminController.loginShow')
-router.post('/admin/login', 'AdminController.login')
-router.get('/admin/dashboard', 'AdminController.dashboard').middleware('auth')
+//Back Office
+router.on('/dashboard').render('pages/backoffice/dashboard')
+//router.get('/admin/dashboard', 'AdminController.dashboard').middleware('auth_middleware')
