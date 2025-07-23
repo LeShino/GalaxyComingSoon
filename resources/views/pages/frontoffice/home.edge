@@ -39,17 +39,17 @@
     <div class="absolute top-8 left-8">
         <div class="flex items-center gap-2">
             <span class="text-2xl font-bold">Galaxy</span>
-            <span class="bg-purple-900/50 text-xs px-2 py-1 rounded-full">Beta</span>
+            <span class="bg-purple-900/50 text-xs px-2 py-1 rounded-full">Coming soon</span>
         </div>
     </div>
 
     <!-- Planets -->
-    <div class="absolute left-0 bottom-0 w-64 h-64">
+    {{--  <div class="absolute left-0 bottom-0 w-64 h-64">
         <img src="{{ asset('resources/images/BluePlanet.png') }}" alt="Blue Planet" class="w-full h-full object-cover opacity-80">
     </div>
     <div class="absolute right-0 top-0 w-48 h-48">
         <img src="{{ asset('resources/images/RedPlanet.png') }}" alt="Red Planet" class="w-full h-full object-cover opacity-80">
-    </div>
+    </div>  --}}
 
     <!-- Main Content -->
     <main class="flex flex-col items-center justify-center min-h-screen px-4 relative z-10">
@@ -115,5 +115,36 @@
             © 2022 Galaxy, All rights reserved.
         </footer>
     </main>
+
+    <section class="absolute inset-0 bg-black/40">
+        <div class="relative h-screen overflow-y-hidden">
+            <!--      <h1 class="text-5xl text-info-500">gtwertsertsertg</h1>-->
+            <!--    Background sky-->
+            <div class="absolute inset-0 w-full h-screen -z-50"
+                style="background-image: url({{ asset('resources/images/sky.jpg') }}); background-position: bottom; background-size: cover;">
+            </div>
+            <!--    Mountain Layer 3-->
+            <div class="absolute inset-0 w-full h-screen -z-40"
+                style="background-image: url({{ asset('resources/images/mountain-3.png') }}); background-position: bottom; background-size: cover;"
+                :style="{ y: mountain3Y }">
+            </div>
+            <!--    Planets-->
+            <div class="absolute inset-0 w-full h-screen -z-30"
+                style="background-image: url({{ asset('resources/images/planets.png') }}); background-position: bottom; background-size: cover;"
+                :style="{ x: planetsX }">
+            </div>
+            <!--    Mountain Layer 2-->
+            <div class="absolute inset-0 w-full h-screen -z-20"
+                style="background-image: url({{ asset('resources/images/mountain-2.png') }}); background-position: bottom; background-size: cover;"
+                :style="{ y: mountain2Y }">
+            </div>
+            <!--    Mountain Layer 1-->
+            <div class="absolute inset-0 w-full h-screen -z-10"
+                style="background-image: url({{ asset('resources/images/mountain-1.png') }}); background-position: bottom; background-size: cover;"
+                :style="{ y: mountain1Y }">
+            </div>
+    </section>
+
+     
 </body>
 </html>
